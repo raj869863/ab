@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="container stack">
+
+    <header>
+        <h1 class="page-title">Design System</h1>
+        <p class="page-subtitle">Internal style guide — Phase 1A visual foundation</p>
+    </header>
+
+    <!-- Typography -->
+    <section class="card stack">
+        <h2 class="section-title">Typography</h2>
+        <div>
+            <p class="page-title">Page title</p>
+            <p class="section-title">Section title</p>
+            <p class="card-title">Card title</p>
+            <p>Body text — recruitment and interview scheduling overview for the internal HR team.</p>
+            <p class="text-secondary">Secondary text — supporting descriptions and metadata.</p>
+            <p class="text-small text-muted">Small muted text — timestamps and hints.</p>
+            <span class="label">Label / Column header</span>
+        </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="card stack">
+        <h2 class="section-title">Buttons</h2>
+        <div class="cluster">
+            <button class="btn btn-primary" type="button">Primary</button>
+            <button class="btn btn-secondary" type="button">Secondary</button>
+            <button class="btn btn-ghost" type="button">Ghost</button>
+            <button class="btn btn-primary" type="button" disabled>Disabled</button>
+            <button class="btn btn-primary btn-sm" type="button">Small</button>
+            <button class="icon-btn" type="button" aria-label="Settings">&#9881;</button>
+        </div>
+    </section>
+
+    <!-- Inputs & filters -->
+    <section class="card stack">
+        <h2 class="section-title">Inputs &amp; Filters</h2>
+        <div class="filter-bar">
+            <div class="filter-group" style="min-width: 220px;">
+                <label class="field-label" for="sg-search">Search</label>
+                <div class="search-field">
+                    <input class="input" id="sg-search" type="search" placeholder="Search anything...">
+                </div>
+            </div>
+            <div class="filter-group">
+                <label class="field-label" for="sg-select">Status</label>
+                <select class="select" id="sg-select">
+                    <option>All</option>
+                    <option>Option A</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label class="field-label" for="sg-date">Date</label>
+                <input class="input" id="sg-date" type="date">
+            </div>
+            <div class="filter-group">
+                <label class="field-label" for="sg-disabled">Disabled</label>
+                <input class="input" id="sg-disabled" type="text" value="Read only" disabled>
+            </div>
+            <button class="btn-reset" type="button">Reset</button>
+        </div>
+    </section>
+
+    <!-- Badges -->
+    <section class="card stack">
+        <h2 class="section-title">Status badges</h2>
+        <div class="cluster">
+            <span class="badge badge-success badge-dot">Confirmed</span>
+            <span class="badge badge-info badge-dot">Upcoming</span>
+            <span class="badge badge-warning badge-dot">Rescheduled</span>
+            <span class="badge badge-danger badge-dot">Cancelled</span>
+            <span class="badge badge-neutral badge-dot">No Response</span>
+            <span class="badge badge-sage badge-dot">Greeted</span>
+        </div>
+    </section>
+
+    <!-- Table -->
+    <section class="stack">
+        <h2 class="section-title">Table</h2>
+        <div class="table-wrap">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Column A</th>
+                        <th>Column B</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sample row</td>
+                        <td class="text-secondary">Secondary value</td>
+                        <td><span class="badge badge-success badge-dot">Confirmed</span></td>
+                        <td><button class="btn btn-secondary btn-sm" type="button">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>Sample row</td>
+                        <td class="text-secondary">Secondary value</td>
+                        <td><span class="badge badge-info badge-dot">Upcoming</span></td>
+                        <td><button class="btn btn-secondary btn-sm" type="button">View</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="stack">
+        <h2 class="section-title">Cards</h2>
+        <div class="cluster">
+            <div class="card card-hover" style="flex: 1; min-width: 220px;">
+                <h3 class="card-title">Normal card</h3>
+                <p class="text-secondary" style="margin: 8px 0 0;">With subtle hover elevation.</p>
+            </div>
+            <div class="card card-compact card-hover" style="flex: 1; min-width: 220px;">
+                <h3 class="card-title">Compact card</h3>
+                <p class="text-secondary" style="margin: 8px 0 0;">Tighter padding.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empty state & links -->
+    <section class="stack">
+        <h2 class="section-title">Empty state &amp; links</h2>
+        <div class="empty-state">
+            <p class="empty-title">Nothing here yet</p>
+            <p class="empty-hint">Data will appear once it is available.</p>
+        </div>
+        <p>Inline <a href="#">text link</a> example.</p>
+    </section>
+
+</main>
+{% endblock %}
